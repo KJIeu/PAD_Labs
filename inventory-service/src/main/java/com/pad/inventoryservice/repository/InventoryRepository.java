@@ -1,6 +1,7 @@
 package com.pad.inventoryservice.repository;
 
 import com.pad.inventoryservice.model.Inventory;
+import com.pad.inventoryservice.model.OrderLineItems;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

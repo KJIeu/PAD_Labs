@@ -2,6 +2,7 @@ package com.pad.inventoryservice.controller;
 
 
 import com.pad.inventoryservice.dto.InventoryResponse;
+import com.pad.inventoryservice.model.OrderLineItems;
 import com.pad.inventoryservice.service.InventoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -18,7 +19,7 @@ public class InventoryController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<InventoryResponse> isInStock(@RequestParam List<String> skuCode){
+    public List<InventoryResponse> isInStock(@RequestParam List<String> skuCode) {
         return inventoryService.isInStock(skuCode);
     }
 }

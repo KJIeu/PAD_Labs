@@ -18,7 +18,7 @@ public class ProductService {
     private final ProductRepository productRepository;
 
 
-    public void createProduct(ProductRequest productRequest){
+    public void createProduct(ProductRequest productRequest) {
         Product product = Product.builder()
                 .name(productRequest.getName())
                 .description(productRequest.getDescription())
@@ -29,7 +29,7 @@ public class ProductService {
         log.info("Product {} is saved", product.getId());
     }
 
-    public List<ProductResponse> getAllProducts(){
+    public List<ProductResponse> getAllProducts() {
         List<Product> products = productRepository.findAll();
 
         return products.stream().map(this::mapToProductResponse).toList();
